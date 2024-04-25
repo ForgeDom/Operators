@@ -10,11 +10,8 @@ int main() {
     cout << "Ââåä³òü íîìåğ ğîêó: ";
     cin >> year;
 
-    int days = 365; 
-
-    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-        days = 366;
-    }
+    int leap_year = (year % 4 == 0);
+    int days = 365 + leap_year;
 
     cout << "Ó " << year << " ğîö³ " << days << " äí³â." << endl;
 
